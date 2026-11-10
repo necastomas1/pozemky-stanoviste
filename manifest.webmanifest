@@ -1,0 +1,16 @@
+{
+  "name": "Pozemky obce Stanoviště",
+  "short_name": "Pozemky obce",
+  "description": "Mapa pozemků ve vlastnictví obce Stanoviště s leteckým snímkem, polohou v terénu a poznámkami.",
+  "lang": "cs",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#2f6b3a",
+  "theme_color": "#2f6b3a",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2f6b3a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pozemky obce">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Pozemky obce Stanoviště</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="lib/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map"></div>
+
+<header id="top">
+  <button class="ic" id="bMenu" aria-label="Legenda a nastavení">☰</button>
+  <div id="title"><b>Pozemky obce</b><span>Stanoviště</span></div>
+  <button class="ic" id="bSearch" aria-label="Hledat parcelu">⌕</button>
+</header>
+
+<div id="searchBox" hidden>
+  <input id="q" type="search" placeholder="Číslo parcely, např. 973/1 nebo st. 126" autocomplete="off" inputmode="search">
+  <div id="res"></div>
+</div>
+
+<div id="fabs">
+  <button class="fab" id="bLayer" aria-label="Letecká mapa">🛰</button>
+  <button class="fab" id="bGps" aria-label="Moje poloha">◎</button>
+</div>
+
+<div id="here" hidden></div>
+
+<section id="sheet" class="sheet" hidden>
+  <div class="grab"></div>
+  <button class="close" data-close="sheet" aria-label="Zavřít">×</button>
+  <div id="sheetBody"></div>
+</section>
+
+<section id="menu" class="sheet full" hidden>
+  <button class="close" data-close="menu" aria-label="Zavřít">×</button>
+  <h2>Pozemky obce Stanoviště</h2>
+  <p class="mut">k.ú. Stanoviště na Moravě · LV 1 · stav podle inventurního soupisu k 30. 9. 2026</p>
+  <div class="tot"><div><b id="tn"></b><span>parcel</span></div><div><b id="ta"></b><span>ha</span></div></div>
+  <h3>Legenda</h3>
+  <div id="cats"></div>
+  <h3>Poznámky</h3>
+  <div id="notesCfg"></div>
+  <h3>Instalace na plochu</h3>
+  <p class="mut">Android (Chrome): menu ⋮ → <i>Přidat na plochu</i> / <i>Nainstalovat aplikaci</i>.<br>iPhone (Safari): tlačítko Sdílet → <i>Přidat na plochu</i>.</p>
+  <p class="mut small">Hranice parcel a ortofoto: ČÚZK, stav k 9. 11. 2026. Mapa má informativní charakter a nenahrazuje výpis z katastru nemovitostí.</p>
+</section>
+
+<script src="lib/leaflet.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
