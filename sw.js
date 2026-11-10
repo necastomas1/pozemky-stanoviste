@@ -1,5 +1,5 @@
 // Service worker: appka se otevře i bez signálu (mapa, hranice parcel a už prohlédnuté letecké snímky).
-const V = 'pozemky-v1';
+const V = 'pozemky-v2';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'config.js', 'manifest.webmanifest',
   'lib/leaflet.js', 'lib/leaflet.css', 'data/pozemky.json', 'data/okoli.json', 'data/orto.json',
   'orto/overview.jpg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];

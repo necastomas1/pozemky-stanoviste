@@ -55,7 +55,11 @@ function init() {
     }
   }).addTo(map);
 
-  map.fitBounds(bgLayer.getBounds(), {padding: [10, 10]});
+  const fitAll = () => map.fitBounds(bgLayer.getBounds(), {padding: [10, 10]});
+  fitAll();
+  let touched = false; map.on('dragstart zoomstart', () => { if (map._loaded) touched = true; });
+  window.addEventListener('resize', () => { map.invalidateSize(); if (!touched) fitAll(); });
+  if (map.getSize().x < 50 || map.getSize().y < 50) setTimeout(() => { map.invalidateSize(); fitAll(); touched = false; }, 400);
   map.setMaxBounds(bgLayer.getBounds().pad(.6));
   $('#tn').textContent = OWN.features.length;
   $('#ta').textContent = (tot / 1e4).toLocaleString('cs-CZ', {maximumFractionDigits: 1});
